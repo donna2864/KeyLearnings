@@ -1,2 +1,2 @@
-#Key Learnings to look back
+# 💡 My Learning Repository
 [About Git and GitHub](./Git.md)
