@@ -69,3 +69,6 @@ security delete-generic-password -s github.com
 ```
 
 After clearing credentials, the next time you push or pull from GitHub, you will be prompted to enter your credentials again.
+
+## Adding multiple users in the same machine:
+https://www.youtube.com/watch?v=6lA0oPoFCAE&ab_channel=JcMiron
