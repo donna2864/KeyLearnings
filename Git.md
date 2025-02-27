@@ -72,3 +72,50 @@ After clearing credentials, the next time you push or pull from GitHub, you will
 
 ## Adding multiple users in the same machine:
 https://www.youtube.com/watch?v=6lA0oPoFCAE&ab_channel=JcMiron
+
+# Deploying Vite + React App on GitHub Pages
+
+Follow these steps to deploy your Vite + React app to GitHub Pages.
+
+## Step 1: Update `vite.config.js`
+Add the following line:
+```js
+export default defineConfig({
+  base: "/repo-name/",
+  plugins: [react()],
+});
+```
+
+## Step 2: Update `package.json`
+Modify the `package.json` file:
+```json
+{
+  "name": "your-app-name",
+  "homepage": "https://github_username.github.io/repo-name/",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+## Step 3: Install `gh-pages`
+Run the following command in your terminal:
+```sh
+npm install --save gh-pages
+```
+
+## Step 4: Deploy the App
+Run:
+```sh
+npm run deploy
+```
+Once the deployment is complete, you will see a message indicating that the app has been published.
+
+## Step 5: Access Your App
+Visit: 
+```
+https://github_username.github.io/repo-name/
+```
+At first, you may see a 404 error. Reload the page 2-3 times, and your app should appear successfully hosted on GitHub Pages!
+
